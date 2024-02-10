@@ -59,7 +59,39 @@ comm file1 file2
  
 diff file1 file2
 ## OUTPUT
-
+localhost:~# cat > file1
+chanchal sindhvi
+c.k.shukla
+s.n.dasgupta
+sumit chakrobarty
+localhost:~# cat>file2
+anil aggarwal
+barun sengupta
+c.k.shukla
+lalit chowdury
+s.n.dasgupta
+localhost:~# cmp file1 file2
+file1 file2 differ: char 1, line 1
+localhost:~# comm file1 file2
+        anil aggarwal
+        barun sengupta
+        c.k.shukla
+chanchal sindhvi
+c.k.shukla
+        lalit chowdury
+                s.n.dasgupta
+sumit chakrobarty
+localhost:~# diff file1 file2
+--- file1
++++ file2
+@@ -1,4 +1,5 @@
+-chanchal sindhvi
++anil aggarwal
++barun sengupta
+ c.k.shukla
++lalit chowdury
+ s.n.dasgupta
+-sumit chakrobarty
 
 #Filters
 
