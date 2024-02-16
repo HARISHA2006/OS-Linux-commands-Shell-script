@@ -224,42 +224,48 @@ Linux is best in this World
  ```
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
-
+Hello world
+hello world
 
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
-
+Hello world
+hello world
 
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
-
+Hello world
+hello world
 
 
 
 egrep '(^hello)' newfile 
 ## OUTPUT
-
+hello world
 
 
 egrep '(world$)' newfile 
 ## OUTPUT
-
+Hello world
+hello world
 
 
 egrep '(World$)' newfile 
 ## OUTPUT
-
+Linux is best in this World
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
-
+Hello world
+hello world
+Linux is best in this World
 
 
 egrep '[1-9]' newfile 
 ## OUTPUT
-
+Linus is world number 1
 
 
 egrep 'Linux.*world' newfile 
