@@ -74,7 +74,7 @@ sumit chakrobarty
  ```
 diff file1 file2
 ## OUTPUT
-~~~
+```
 --- file1
 +++ file2
 @@ -1,4 +1,5 @@
@@ -85,7 +85,7 @@ diff file1 file2
 +lalit chowdury
  s.n.dasgupta
 -sumit chakrobarty
-~~~
+```
 #Filters
 
 ### Create the following files file11, file22 as follows:
