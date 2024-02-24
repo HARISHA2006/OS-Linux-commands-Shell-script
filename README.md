@@ -560,21 +560,34 @@ mv backup.tar backupdir
  
 tar -tvf backup.tar
 ## OUTPUT
-tar: can't open 'backup.tar': No such file or directory
-
-tar -xvf backup.tar
+```
+-rw-r--r-- ezlian/ezlian    31 2024-02-09 16:02 file1
+-rw-r--r-- ezlian/ezlian    28 2024-02-09 16:11 file11
+-rw-r--r-- ezlian/ezlian    31 2024-02-09 16:06 file2
+-rw-r--r-- ezlian/ezlian   130 2024-02-16 16:24 file21
+-rw-r--r-- ezlian/ezlian   154 2024-02-16 16:25 file22
+-rw-r--r-- ezlian/ezlian   209 2024-02-16 15:39 file23
+-rw-r--r-- ezlian/ezlian    95 2024-02-15 09:44 newfile
+-rw-r--r-- ezlian/ezlian    51 2024-02-22 09:09 urllist.txt
+```
+tar -xvf backupdir/backup.tar
 ## OUTPUT
-tar: can't open 'backup.tar': No such file or directory
-gzip backup.tar
-gzip: backup.tar: No such file or directory
-ls .gz
+```
+file1
+file11
+file2
+file21
+file22
+file23
+newfile
+urllist.txt
+```
+ls: .gz:
 ## OUTPUT
-ls: .gz: No such file or directory 
+```
+backup.tar.gz
 gunzip backup.tar.gz
-## OUTPUT
-gzip: backup.tar.gz: No such file or directory
-
- 
+``` 
 # Shell Script
 ```
 echo '#!/bin/sh' > my-script.sh
@@ -583,8 +596,7 @@ echo 'echo Hello World‘; exit 0 >> my-script.sh
 chmod 755 my-script.sh
 ./my-script.sh
 ## OUTPUT
-
- 
+Hello World 
 cat << stop > herecheck.txt
 ```
 hello in this world
@@ -595,8 +607,11 @@ stop
 
 cat herecheck.txt
 ## OUTPUT
-
-
+```
+hello in this world
+i cant stop
+for this non stop movement
+```
 cat < scriptest.sh 
 ```bash
 \#!/bin/sh
